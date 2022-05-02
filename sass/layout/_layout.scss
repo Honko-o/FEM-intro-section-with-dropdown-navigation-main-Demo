@@ -1,0 +1,14 @@
+@use '../core/' as *;
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background-color: $neutral-almost-white;
+}
+.container {
+    width: 100%;
+    padding: {
+        left: 15px;
+        right: 15px;
+    }
+}

@@ -1,0 +1,36 @@
+@use './functions' as *;
+
+/*
+    Prefixer Mixin
+    Mixin to add Vendor Prefixes to CSS Properties
+*/
+@mixin prefixer($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+/*
+    Overlay Mixin
+    Mixin To add Basic Overlay properties
+*/
+@mixin overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+    Flexbox Mixin
+    Mixin To Apply Flexbox Properties
+*/
+@mixin flex($justify-content: flex-start, $align-items: stretch, $direction: row, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}

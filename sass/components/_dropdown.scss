@@ -1,0 +1,54 @@
+// Dropdown
+.features__dropdown,
+.company__dropdown  {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 30px rgb(0 0 0 / 21%);
+    padding: 15px;
+    // To Position the Icons
+    li {
+        position: relative;
+        margin-bottom: 1em;
+    }
+    a {
+        display: flex;
+        align-items: center;
+    }
+}
+.company__dropdown {
+    width: 105px;
+}
+.features__dropdown__link,
+.company__dropdown__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+.todo {
+    & a::before {
+        content: url("../images/icon-todo.svg");
+        margin-right: 10px;
+    }
+}
+.calender {
+    & a::before {
+        content: url("../images/icon-calendar.svg");
+        margin-right: 10px;
+    }
+}
+.reminders {
+    & a::before {
+        content: url("../images/icon-reminders.svg");
+        margin-right: 10px;
+    }
+}
+.planning {
+    & a::before {
+        content: url("../images/icon-planning.svg");
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,115 @@
+@use '../core/' as *;
+
+
+// Start Intro
+.intro {
+    display: flex;
+    flex-direction: column;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    
+}
+.intro__hero__image {
+    order: -1;
+    img {
+        max-width: 100%;
+    }
+}
+.intro__section {
+    text-align: center;
+}
+.intro__section__title {
+    color: $neutral-almost-black;
+    margin: {
+        top: 30px;
+        bottom: 15px;
+    }
+}
+.intro__section__description {
+    color: $neutral-medium-gray;
+    line-height: 1.6;
+}
+.intro__section__link {
+    display: block;
+    width: 130px;
+    background-color: $neutral-almost-black;
+    border: 1px solid $neutral-almost-black;
+    color: $neutral-almost-white;
+    margin: {
+        left: auto;
+        right: auto;
+        bottom: 30px;
+    }
+    padding: 14px;
+    border-radius: 16px;
+    &:hover {
+        background-color: transparent;
+        color: $neutral-almost-black;
+    }
+    font-weight: 700;
+    transition: color 300ms, background-color 300ms;
+}
+.intro__section__clients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    img {
+        display: block;
+        width: 70px;
+    }
+}
+// End Intro
+
+// Desktop Size
+@media (min-width: 890px) {
+    
+    // Start Intro
+    .intro {
+        flex-direction: row;
+        gap: 100px;
+        max-width: 1160px;
+        margin-top: 5%;
+    }
+    .intro__section {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        flex: 100%;
+    }
+    .intro__section__title {
+        text-align: left;
+        font-size: 4em;
+        width: 11ch;
+        margin: {
+            top: 0;
+            bottom: 1em;
+        }
+    }
+    .intro__section__description {
+        text-align: left;
+        width: 42ch;
+        margin: {
+            bottom: 2em;
+        }
+    }
+    .intro__section__link {
+        margin: {
+            left: 0;
+            right: auto;
+        }
+    }
+    // .intro__section__clients {
+
+    // }
+    .intro__hero__image {
+        order: 1;
+        height: 4;
+        &img:last-of-type {
+            min-width: 420px;
+        }
+    }
+    // End Intro
+}

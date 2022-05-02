@@ -1,0 +1,28 @@
+@media (min-width: 890px) {
+    .hidden-md {
+        display: none;
+    }
+    .show-md {
+        display: block;
+    }
+    .collapse {
+        display: block;
+    }
+}
+
+@media (max-width: 889px) {
+    .hidden-xs {
+        display: none;
+    }
+    .show-xs {
+        display: block;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.collapse {
+    display: none;
+}
